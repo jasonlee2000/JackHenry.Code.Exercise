@@ -13,6 +13,6 @@ Press Ctrl+F5 to launch the application.
 
 Screenshot:
 
-![image-20201226163050712](C:\Users\jlee\AppData\Roaming\Typora\typora-user-images\image-20201226163050712.png)
+![Capture](Capture.PNG)
 
 ​	
