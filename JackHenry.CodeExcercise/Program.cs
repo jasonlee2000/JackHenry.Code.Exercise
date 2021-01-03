@@ -21,7 +21,7 @@
 
     class Program
     {
-        public static IConfigurationRoot configuration;
+        public static IConfigurationRoot Configuration;
 
         static int Main(string[] args)
         {
@@ -84,14 +84,14 @@
             serviceCollection.AddLogging();
 
             // Build configuration
-            configuration = new ConfigurationBuilder()
+            Configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
                 .AddJsonFile("appsettings.json", false)
                 .Build();
 
             var config = new Settings();
 
-            configuration.GetSection("Settings").Bind(config);
+            Configuration.GetSection("Settings").Bind(config);
 
             // Add access to settings
             serviceCollection.AddSingleton(config);
@@ -99,7 +99,7 @@
             // Add Loaders
             serviceCollection.AddTransient<ILoaderService, LoaderService>();
             serviceCollection.AddTransient<IPrinterService, PrinterService>();
-            serviceCollection.AddTransient<ICounterService, CounterService>();
+            serviceCollection.AddSingleton<ICounterService, CounterService>();
 
             // Add Counters
             serviceCollection.AddTransient<IEmojiCounter, EmojiCounter>();

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JackHenry.CodeExcercise.Console\JackHenry.CodeExercise.App.csproj" />
+    <ProjectReference Include="..\JackHenry.CodeExcercise\JackHenry.CodeExercise.App.csproj" />
   </ItemGroup>
 
 </Project>

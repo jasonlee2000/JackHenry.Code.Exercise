@@ -18,10 +18,7 @@ namespace JackHenry.CodeExercise.App.Services.Matchers
             Logger = logger;
         }
 
-        public virtual Task<List<string>> Match(string input)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract Task<List<string>> Match(string input);
 
         protected void IncrementCounter(ConcurrentDictionary<string, int> queue, string key)
         {
